@@ -3,6 +3,7 @@ using Bulky.DataAccess.Repository;
 using Bulky.DataAccess.Repository.IRepository;
 using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace E_commerce_Application.Areas.Admin.Controllers
 {
@@ -22,6 +23,14 @@ namespace E_commerce_Application.Areas.Admin.Controllers
 
         public IActionResult Create()
         {
+            IEnumerable<SelectListItem> CategoryList = _unitofwork.Category
+               .GetAll().Select(u => new SelectListItem
+               {
+                   Text = u.Name,
+                   Value = u.CategoryId.ToString()
+               });
+
+            ViewBag.CategoryList = CategoryList;
             return View();
         }
 

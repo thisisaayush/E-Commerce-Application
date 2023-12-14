@@ -19,3 +19,14 @@
 In a .NET Core application, combining n-tier architecture with the repository pattern 
 helps create a scalable, maintainable, and testable codebase. It simplifies development, 
 improves code organization, and facilitates future modifications and enhancements.
+
+6. ViewBag- Transfers data from the Controller to View, not vice-versa. Ideal for situations
+   in which the temporary data is not in a model. It is a dynamic property taht takes advantage
+   of the new dynamic features of C# 4.0. It is a wrapper around view data.
+
+7. ViewData- It also transfers data from the Controller to View, not vice-versa.But it must be 
+   type cast before use, and its life only lasts during the current http request and is null if
+   redirection occurs.
+
+8. TempData- It can be used to store data between two consecutive requests such as error messages 
+   which goes away when you refresh the page.
