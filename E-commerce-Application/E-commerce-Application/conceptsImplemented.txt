@@ -1,0 +1,21 @@
+﻿1. Implemented Entity Framework for database integration.
+2. Implemented CRUD Operations, N-Tier Architecure, and Repository patterns.
+	a. N-Tier Architecture 
+		- modularity and scalability.
+		- separation of concerns (SoC).
+		- reusability.
+		- flexibility and maintainability.
+	
+	b. Repository Pattern
+		- abstraction of Data Access Logic.
+		- consistent querying and updating. 
+		- encapsulation of data access details.
+3. Authorization and Validation.
+4. Created hierarchical order for the application.
+		- Admin Access.
+		- Customer Access.
+5. Established foreign-key relationships.
+
+In a .NET Core application, combining n-tier architecture with the repository pattern 
+helps create a scalable, maintainable, and testable codebase. It simplifies development, 
+improves code organization, and facilitates future modifications and enhancements.
