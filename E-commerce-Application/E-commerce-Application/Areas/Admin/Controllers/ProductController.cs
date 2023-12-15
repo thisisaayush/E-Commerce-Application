@@ -1,7 +1,6 @@
-﻿using Bulky.DataAccess.Data;
-using Bulky.DataAccess.Repository;
-using Bulky.DataAccess.Repository.IRepository;
+﻿using Bulky.DataAccess.Repository.IRepository;
 using Bulky.Models;
+using Bulky.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -23,28 +22,39 @@ namespace E_commerce_Application.Areas.Admin.Controllers
 
         public IActionResult Create()
         {
-            IEnumerable<SelectListItem> CategoryList = _unitofwork.Category
+            ProductVM productVM = new()
+            {
+                CategoryList = _unitofwork.Category
+               .GetAll().Select(u => new SelectListItem
+               {
+                   Text = u.Name,
+                   Value = u.CategoryId.ToString()
+               }),
+                Product = new Product()
+            };
+            return View(productVM);
+        }
+
+        [HttpPost]
+        public IActionResult Create(ProductVM productVM)
+        {
+            if (ModelState.IsValid)
+            {
+                _unitofwork.Product.Add(productVM.Product);
+                _unitofwork.Save();
+                TempData["success"] = "Product created successfully!";
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                productVM.CategoryList = _unitofwork.Category
                .GetAll().Select(u => new SelectListItem
                {
                    Text = u.Name,
                    Value = u.CategoryId.ToString()
                });
-
-            ViewBag.CategoryList = CategoryList;
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Create(Product obj)
-        {
-            if (ModelState.IsValid)
-            {
-                _unitofwork.Product.Add(obj);
-                _unitofwork.Save();
-                TempData["success"] = "Product created successfully!";
-                return RedirectToAction("Index");
+                return View(productVM);
             }
-            return View();
         }
 
         public IActionResult Edit(int? id)
