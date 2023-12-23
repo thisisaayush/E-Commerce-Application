@@ -3,6 +3,7 @@ using Bulky.Models;
 using Bulky.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
 namespace E_commerce_Application.Areas.Admin.Controllers
 {
@@ -10,9 +11,12 @@ namespace E_commerce_Application.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitofwork;
-        public ProductController(IUnitOfWork unitofWork)
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        public ProductController(IUnitOfWork unitofWork, IWebHostEnvironment webHostEnvironment)
         {
             _unitofwork = unitofWork;
+            _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index() //goes to index.cshtml class in Views/Product folder.
         {
@@ -50,6 +54,19 @@ namespace E_commerce_Application.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
+                if(file != null)
+                {
+                    String fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    string productPath = Path.Combine(wwwRootPath, @"images\product");
+
+                    using (var fileStream = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+
+                    productVM.Product.ImageUrl = @"\images\product\" + fileName;
+                }
                 _unitofwork.Product.Add(productVM.Product);
                 _unitofwork.Save();
                 TempData["success"] = "Product created successfully!";
