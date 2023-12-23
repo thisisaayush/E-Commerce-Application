@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4ejYjeb8fmeu+SAnRLFvGueyhkx8xyLYmDvqOejiTuk=",
+  "Hash": "2u+G8s0s+SN1xNR1xT0u2WwRD5mR0vyXdFRxJ+T/Zl0=",
   "Source": "E-commerce-Application",
   "BasePath": "_content/E-commerce-Application",
   "Mode": "Default",
@@ -1347,25 +1347,6 @@
       "OriginalItemSpec": "wwwroot\\images\\product\\8204e348-d699-42dc-ab70-25f8d2fe9b1b.png"
     },
     {
-      "Identity": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\images\\product\\94d374d8-a380-45c5-80c2-e7eff4036c86.png",
-      "SourceId": "E-commerce-Application",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\",
-      "BasePath": "_content/E-commerce-Application",
-      "RelativePath": "images/product/94d374d8-a380-45c5-80c2-e7eff4036c86.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\product\\94d374d8-a380-45c5-80c2-e7eff4036c86.png"
-    },
-    {
       "Identity": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\images\\product\\9dde8c6c-e446-4379-8709-99c00775f7da.png",
       "SourceId": "E-commerce-Application",
       "SourceType": "Discovered",
@@ -1402,6 +1383,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\product\\e08fefb9-a1cf-45c3-8000-f108af82593d.png"
+    },
+    {
+      "Identity": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\js\\product.js",
+      "SourceId": "E-commerce-Application",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\",
+      "BasePath": "_content/E-commerce-Application",
+      "RelativePath": "js/product.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\product.js"
     },
     {
       "Identity": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\js\\site.js",
