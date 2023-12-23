@@ -20,7 +20,7 @@ namespace E_commerce_Application.Areas.Admin.Controllers
         }
         public IActionResult Index() //goes to index.cshtml class in Views/Product folder.
         {
-            List<Product> objProductList = _unitofwork.Product.GetAll().ToList();
+            List<Product> objProductList = _unitofwork.Product.GetAll(includeProperties: "Category").ToList();
             return View(objProductList);
         }
 
