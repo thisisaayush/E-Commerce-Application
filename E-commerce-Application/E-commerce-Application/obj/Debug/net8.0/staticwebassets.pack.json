@@ -29,16 +29,16 @@
       "PackagePath": "staticwebassets\\images\\product\\8204e348-d699-42dc-ab70-25f8d2fe9b1b.png"
     },
     {
-      "Id": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\images\\product\\94d374d8-a380-45c5-80c2-e7eff4036c86.png",
-      "PackagePath": "staticwebassets\\images\\product\\94d374d8-a380-45c5-80c2-e7eff4036c86.png"
-    },
-    {
       "Id": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\images\\product\\9dde8c6c-e446-4379-8709-99c00775f7da.png",
       "PackagePath": "staticwebassets\\images\\product\\9dde8c6c-e446-4379-8709-99c00775f7da.png"
     },
     {
       "Id": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\images\\product\\e08fefb9-a1cf-45c3-8000-f108af82593d.png",
       "PackagePath": "staticwebassets\\images\\product\\e08fefb9-a1cf-45c3-8000-f108af82593d.png"
+    },
+    {
+      "Id": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\js\\product.js",
+      "PackagePath": "staticwebassets\\js\\product.js"
     },
     {
       "Id": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\js\\site.js",
