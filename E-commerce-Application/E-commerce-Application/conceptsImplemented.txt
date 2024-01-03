@@ -30,3 +30,5 @@ improves code organization, and facilitates future modifications and enhancement
 
 8. TempData- It can be used to store data between two consecutive requests such as error messages 
    which goes away when you refresh the page.
+
+9. Scaffold Identity- Authentication and Authorization.
