@@ -15,6 +15,7 @@ namespace Bulky.DataAccess.Data
         public DbSet<Category> Categories { get; set; } //Categories is Table name in database- SQL Server. 
         public DbSet<Product> Products { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Company> Companies { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -82,7 +83,13 @@ namespace Bulky.DataAccess.Data
                      Price100 = 20,
                      CategoryId = 4,
                      ImageUrl = ""
-                 }); 
+                 }
+                 );
+            modelBuilder.Entity<Company>().HasData(
+               new Company { Id = 1, Name = "Hanuman",  StreedAddress="Jungle", City="Vanar", ZipCode="**2&83", State="Strength", PhoneNumber="1111111111" },
+               new Company { Id = 2, Name = "Angad",  StreedAddress="Jungle", City="Vanar", ZipCode="**2&83", State="Strength", PhoneNumber="22222222222" },
+               new Company { Id = 3, Name = "Angad",  StreedAddress="Jungle", City="Vanar", ZipCode="**2&83", State="Strength", PhoneNumber="3333333333" }
+               );
         }
 
 

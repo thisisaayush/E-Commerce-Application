@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\images\\product\\e08fefb9-a1cf-45c3-8000-f108af82593d.png"
     },
     {
+      "Id": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\js\\company.js",
+      "PackagePath": "staticwebassets\\js\\company.js"
+    },
+    {
       "Id": "C:\\Users\\thaku\\Desktop\\BulkyWeb\\E-commerce-Application\\E-commerce-Application\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
     },

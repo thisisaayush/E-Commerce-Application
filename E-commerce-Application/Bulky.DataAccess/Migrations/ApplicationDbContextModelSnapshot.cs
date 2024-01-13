@@ -69,6 +69,70 @@ namespace Bulky.DataAccess.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Bulky.Models.Company", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StreedAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ZipCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Companies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            City = "Vanar",
+                            Name = "Hanuman",
+                            PhoneNumber = "1111111111",
+                            State = "Strength",
+                            StreedAddress = "Jungle",
+                            ZipCode = "**2&83"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            City = "Vanar",
+                            Name = "Angad",
+                            PhoneNumber = "22222222222",
+                            State = "Strength",
+                            StreedAddress = "Jungle",
+                            ZipCode = "**2&83"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            City = "Vanar",
+                            Name = "Angad",
+                            PhoneNumber = "3333333333",
+                            State = "Strength",
+                            StreedAddress = "Jungle",
+                            ZipCode = "**2&83"
+                        });
+                });
+
             modelBuilder.Entity("Bulky.Models.Product", b =>
                 {
                     b.Property<int>("Id")
