@@ -90,7 +90,7 @@ namespace Bulky.DataAccess.Migrations
                     b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StreedAddress")
+                    b.Property<string>("StreetAddress")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ZipCode")
@@ -108,7 +108,7 @@ namespace Bulky.DataAccess.Migrations
                             Name = "Hanuman",
                             PhoneNumber = "1111111111",
                             State = "Strength",
-                            StreedAddress = "Jungle",
+                            StreetAddress = "Jungle",
                             ZipCode = "**2&83"
                         },
                         new
@@ -118,7 +118,7 @@ namespace Bulky.DataAccess.Migrations
                             Name = "Angad",
                             PhoneNumber = "22222222222",
                             State = "Strength",
-                            StreedAddress = "Jungle",
+                            StreetAddress = "Jungle",
                             ZipCode = "**2&83"
                         },
                         new
@@ -128,7 +128,7 @@ namespace Bulky.DataAccess.Migrations
                             Name = "Angad",
                             PhoneNumber = "3333333333",
                             State = "Strength",
-                            StreedAddress = "Jungle",
+                            StreetAddress = "Jungle",
                             ZipCode = "**2&83"
                         });
                 });
@@ -455,6 +455,9 @@ namespace Bulky.DataAccess.Migrations
                     b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
+
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -472,6 +475,8 @@ namespace Bulky.DataAccess.Migrations
                     b.Property<string>("ZipCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasIndex("CompanyId");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
@@ -536,6 +541,15 @@ namespace Bulky.DataAccess.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Bulky.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("Bulky.Models.Company", "Company")
+                        .WithMany()
+                        .HasForeignKey("CompanyId");
+
+                    b.Navigation("Company");
                 });
 #pragma warning restore 612, 618
         }

@@ -86,9 +86,9 @@ namespace Bulky.DataAccess.Data
                  }
                  );
             modelBuilder.Entity<Company>().HasData(
-               new Company { Id = 1, Name = "Hanuman",  StreedAddress="Jungle", City="Vanar", ZipCode="**2&83", State="Strength", PhoneNumber="1111111111" },
-               new Company { Id = 2, Name = "Angad",  StreedAddress="Jungle", City="Vanar", ZipCode="**2&83", State="Strength", PhoneNumber="22222222222" },
-               new Company { Id = 3, Name = "Angad",  StreedAddress="Jungle", City="Vanar", ZipCode="**2&83", State="Strength", PhoneNumber="3333333333" }
+               new Company { Id = 1, Name = "Hanuman",  StreetAddress="Jungle", City="Vanar", ZipCode="**2&83", State="Strength", PhoneNumber="1111111111" },
+               new Company { Id = 2, Name = "Angad",  StreetAddress="Jungle", City="Vanar", ZipCode="**2&83", State="Strength", PhoneNumber="22222222222" },
+               new Company { Id = 3, Name = "Angad",  StreetAddress="Jungle", City="Vanar", ZipCode="**2&83", State="Strength", PhoneNumber="3333333333" }
                );
         }
 
