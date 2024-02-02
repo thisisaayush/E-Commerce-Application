@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Book_Store_Database_Design.Models.Book>
+
+<h2>Book List</h2>
+<a asp-action="Create" class="btn btn-primary">Create Book</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Book ID</th>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Price</th>
+           @*  <th>Author ID</th>
+            <th>Category ID</th> *@
+            <th>Quantity In Stock</th>
+            <th>Publication Year</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.BookID</td>
+                <td>@book.ISBN</td>
+                <td>@book.Title</td>
+                <td>@book.Price</td>
+               @*  <td>@book.AuthorID</td>
+                <td>@book.CategoryID</td> *@
+                <td>@book.QuantityInStock</td>
+                <td>@book.PublicationYear</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@book.BookID">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@book.BookID">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@book.BookID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
