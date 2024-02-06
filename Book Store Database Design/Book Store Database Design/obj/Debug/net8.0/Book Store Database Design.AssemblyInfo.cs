@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Book Store Database Design")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e280fac0a3cd1cc0909f8b38e9721fc2c22e8eec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2c72abef4e8638f9b8f8df4063b7ac3ecc2c260")]
 [assembly: System.Reflection.AssemblyProductAttribute("Book Store Database Design")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Book Store Database Design")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

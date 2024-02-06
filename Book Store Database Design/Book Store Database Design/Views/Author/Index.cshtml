@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Book_Store_Database_Design.Models.Author>
+
+<h2>Author List</h2>
+<a asp-action="Create" class="btn btn-primary">Add Author</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Author ID</th>
+            <th>Name</th>
+            <th>Bio</th>
+            <th>Birth Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                <td>@author.AuthorID</td>
+                <td>@author.AuthorName</td>
+                <td>@author.AuthorBio</td>
+                <td>@(author.BirthDate.HasValue ? author.BirthDate.Value.ToString("MM/dd/yyyy") : "")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@author.AuthorID">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@author.AuthorID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
