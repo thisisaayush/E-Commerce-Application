@@ -18,6 +18,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\thaku\Desktop\BulkyWeb\Book Store Database Design\Book Store Database Design
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/thaku/Desktop/BulkyWeb/Book Store Database Design/Book Store Database Design/Views/Author/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thaku/Desktop/BulkyWeb/Book Store Database Design/Book Store Database Design/Views/Author/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thaku/Desktop/BulkyWeb/Book Store Database Design/Book Store Database Design/Views/Author/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thaku/Desktop/BulkyWeb/Book Store Database Design/Book Store Database Design/Views/Author/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thaku/Desktop/BulkyWeb/Book Store Database Design/Book Store Database Design/Views/Author/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yXFByaXZhY3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/thaku/Desktop/BulkyWeb/Book Store Database Design/Book Store Database Design/Views/Book/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
