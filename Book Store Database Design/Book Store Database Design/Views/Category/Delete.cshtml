@@ -1,0 +1,23 @@
+﻿@model Book_Store_Database_Design.Models.Category
+
+<h2>Delete Category</h2>
+
+<div>
+    <h4>Are you sure you want to delete this category?</h4>
+    <h4>Category ID: @Model.CategoryID</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Category Name</dt>
+        <dd class="col-sm-10">@Model.CategoryName</dd>
+
+        <dt class="col-sm-2">Description</dt>
+        <dd class="col-sm-10">@Model.Description</dd>
+    </dl>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="CategoryID" />
+        
+        <button type="submit" class="btn btn-danger">Confirm Delete</button>
+        <a asp-action="Index">Cancel</a>
+    </form>
+</div>
