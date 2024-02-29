@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Book_Store_Database_Design.Models.Category>
+
+<h2>Book Category</h2>
+<a asp-action="Create" class="btn btn-primary">Add Category</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Category ID</th>
+            <th>Category Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                <td>@author.CategoryID</td>
+                <td>@author.CategoryName</td>
+                <td>@author.Description</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@author.CategoryID">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@author.CategoryID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
